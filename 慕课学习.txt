@@ -1,0 +1,42 @@
+electron(慕课网学习一个课程)
+vue
+element-ui
+
+node版本查看：
+node -v 
+
+npm版本查看：
+npm -v
+
+nvm node版本管理工具：mac安装不成功
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+vim进入编辑模式：
+小写o:在光标所在行的下一行编辑
+esc:退出编辑模式回到命令模式
+:wq:保存退出
+
+git版本查看：
+git --version
+
+安装electron demo:
+git clone https://github.com/electron/electron-quick-start
+npm install
+npm start
+
+安装nodemon,自动重启工具
+npm install nodemon --save-dev
+
+electron使用IPC进程通讯
+
+使用bootstrap
+npm install bootstrap --save
+
+提示node语法
+npm install --save-dev @types/node
+
+数据持久化
+npm install electron-store --save
+
+唯一id
+npm install uuid --save
