@@ -1,10 +1,49 @@
 {
-  "name": "electron-quick-start",
+  "name": "elena-simple-player",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon --watch main.js --exec 'electron .'"
+    "start": "nodemon --watch main.js --exec \"electron .\"",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "elenaSimplePlayer",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "background": "build/appdmg.png",
+      "icon": "build/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 280,
+          "type": "link",
+          "path": "Application"
+        },
+        {
+          "x": 110,
+          "y": 280,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -19,10 +58,12 @@
   "devDependencies": {
     "@types/node": "^14.11.8",
     "electron": "^10.1.2",
+    "electron-builder": "^22.9.1",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
-    "electron-store": "^6.0.1"
+    "electron-store": "^6.0.1",
+    "uuid": "^8.3.1"
   }
 }

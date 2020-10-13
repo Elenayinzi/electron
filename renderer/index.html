@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>本地播放器</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
       <div class="container mt-4">
         <h1>我的播放器</h1>
         <button type="button" id="add-music-button" class="btn btn-primary btn-lg btn-block mt-4">添加歌曲到曲库</button>
+        <div id="tracksList" class="mt-4">
+        </div>
       </div>
       <script>
         require('./index.js')

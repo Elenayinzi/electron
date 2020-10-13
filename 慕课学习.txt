@@ -40,3 +40,9 @@ npm install electron-store --save
 
 唯一id
 npm install uuid --save
+
+打包应用工具
+npm install electron-builder --save-dev
+
+mac,linux,windows详细配置：
+zulip-electron
